@@ -1,124 +1,136 @@
-<h1 id="segéd-1.0">Segéd 1.0</h1>
-<h2 id="mire-való-a-program">Mire való a program?</h2>
-<p>A program segítségével bármelyik Windows programban rövidítéseket
-    használhatsz, hogy kevesebbet kelljen gépelned. A rövidítéseket egy
-    szöveges fájlban (<em>sajat.txt</em>) adhatod meg.</p>
-<p>Ezen kívül van még néhány funkció a munkád megkönnyítéséhez.</p>
-<h2 id="telepítés">Telepítés</h2>
-<p>A program magyar nyelvű Windows 10/11 operációs rendszeren
-    működik.</p>
-<p>A program futtatásához sükség van az AutoHotkey programra, amelyet a
-    <a href="https://autohotkey.com/download/ahk-install.exe">https://autohotkey.com/download/ahk-install.exe</a>
-    címről tölthetsz le. A telepítésnél válaszd az <strong>ANSI 32-bites
-        kódolást</strong>!
-</p>
-<p>Ezután a Segéd program futtatásához egy tetszőleges mappába be kell
-    másolnod a fájlokat. A programot a <em>seged.ahk</em> fájllal indíthatod
-    el.</p>
-<p>Indítás után megjelenik a program ikonja (Kék háttéren egy fehér S
-    betű) az értesítési területen, a képernyő jobb alsó sarkában. Ha a
-    Windows automatikusan elrejti az ikont, visszahúzhatod az egérrel az
-    értesítési területre.</p>
-<p>A program <strong>menüjének</strong> megjelenítéséhez kattints a jobb
-    egérgombbal a program ikonjára, vagy nyomd meg a Win+Y billentyűket! A
-    menü eltüntetéséhez kattints a bal gombbal tetszőleges helyre, vagy
-    nyomd meg az Esc billentyűt! Duplán az ikonra kattintva a rövidítéseket
-    tartalmazó <em>sajat.txt</em> fájl jelenik meg.</p>
-<p>Ha azt szeretnéd, hogy a program a Windows betöltésekor
-    <strong>automatikusan</strong> elinduljon, a menüben kapcsold be az
-    Automatikus indítás menüpontot.
-</p>
-<p>Ha áthelyezed a programot egy másik mappába, kapcsold ki, majd újra
-    be az Automatikus indítást (másképp nem fog működni)! Ha újabb
-    programváltozatot telepítesz, a régi változat menüjében kapcsold ki az
-    automatikus indítást, lépj ki a programból, majd indítsd el az új
-    változatot és kapcsold be ezen az Automatikus indítást!</p>
-<h2 id="rövidítések-használata">Rövidítések használata</h2>
-<p>Saját rövidítéseidet a <em>sajat.txt</em> fájlban tárolja a program.
-    Ezt megnyithatod a menü Rövidítések parancsával, duplán a program
-    ikonjára kattintva, a Ctrl+Win+szóköz billentyűkkel vagy közvetlenül a
-    fájlkezelőből is.</p>
-<p>A sajat.txt fájlban a rövidítések ilyen formában vannak:<br />
-    ::pl::például</p>
-<p>A bal oldali rész a rövidítés, a jobb oldali pedig a
-    behelyettesítendő szöveg. Ha bármilyen programban beírod a rövidítést és
-    utána tabulátort, akkor a rövidítés helyére a teljes szöveg kerül, és a
-    kurzor az utolsó szó végén fog állni. (A tabulátor nem íródik be.)</p>
-<p>Soronként egy rövidítést adhatsz meg. Ha több soros szöveget
-    szeretnél rövidíteni, a sortörések helyett írd be az {Enter} szöveget.
-    Például:<br />
-    ::kji::Kis János{Enter}igazgató</p>
-<p>Tetszőleges számú rövidítést megadhatsz. Célszerű ABC sorrendbe
-    rendezni őket, hogy áttekinthetőbb legyen a lista. Ha sok rövidítés van,
-    csoportokba is szervezheted őket, de ügyelj arra, hogy ugyanaz a
-    rövidítés ne forduljon elő kétszer. (Ilyenkor csak az első működik.)</p>
-<p>A pontosvesszővel kezdődő sorok megjegyzések, a működést nem
-    befolyásolják.</p>
-<p>A rövidítések megadása után el kell menteni a sajat.txt fájlt, majd
-    újra be kell tölteni a seged.ahk programot. (Válaszd a menüből az
-    Újratöltés parancsot!)</p>
-<h2 id="program-mappájának-megnyitása">Program mappájának
-    megnyitása</h2>
-<p>Ehhez válaszd a második menüpontot: Program mappája</p>
-<h2 id="dokumentáció">Dokumentáció</h2>
-<p>A <strong>Súgó</strong> parancs (Ctrl+Win+F1) egy rövid összefoglalót
-    jelenít meg a program használatáról egy szöveges fájlban. A
-    <strong>Leírás</strong> parancs (Ctrl+Win+F2) ezt a leírást jeleníti
-    meg. A könnyebb tájékozódás érdekében célszerű bekapcsolni a navigációban a
-    címsorok megjelenítését.
-</p>
-<p>A <strong>Névjegy</strong> a program névjegyét és a gép adatait
-    (gépnév, felhasználónév, Windows változat) jeleníti meg.</p>
-<h2 id="felfüggesztés-újratöltés-kilépés">Felfüggesztés, újratöltés,
-    kilépés</h2>
-<p>Bár a programot úgy terveztem, hogy ne ütközzön a Windows és más
-    programok billentyűkombinációival, előfordulhat, hogy ideiglenesen fel
-    szeretnéd <strong>függeszteni</strong> a működését. Ezt kétféleképpen
-    teheted meg:</p>
-<ul>
-    <li>
-        <p>A jobb egérgombbal rákattintasz a program ikonjára és a
-            Felfüggeszt parancsot választod.</p>
-    </li>
-    <li>
-        <p>Megnyomod a Shift+Pause billentyűket.</p>
-    </li>
-</ul>
-<p>A program ikonja mindkét esetben egy zöld négyzetre változik, benne
-    egy fehér S betűvel, a menüben pedig pipa jelzi a felfüggesztést. A
-    visszakapcsolás ugyanúgy történik, mind a szüneteltetés: vagy újra a
-    Felfüggesztés parancsot választod a menüből, vagy megnyomod a
-    Shift+Pause billentyűt.</p>
-<p>Ha megváltoztatod a rövidítéseket, <strong>töltsd be újra</strong> a
-    programot a menüből az Újratöltés paranccsal.</p>
-<p>Ha <strong>ki szeretnél lépni</strong> a programból, akkor válaszd a
-    program menüjéből a Kilépés parancsot, vagy nyomd meg a Ctrl+Win+Q
-    billentyű­kombinációt. Ezután még meg is kell erősítened kilépési
-    szándékodat.</p>
-<p>Remélem, hogy a kilépést ritkán fogod választani . A Windows
-    leállítása vagy kijelentkezés előtt sem szükséges kilépni a programból.
-    Futás közben kb. 2 MB memóriát foglal el.</p>
-<h2 id="egyebek">Egyebek</h2>
-<p>Alsó <strong>idézőjelet</strong> a ctrl+win+ö, felső
-    <strong>idézőjelet</strong> a ctrl+win+ü billentyűkkel írhatsz be.
-</p>
-<p>Ha a numerikus billentyűzeten a tizedesvessző helyett
-    <strong>tizedespontot</strong> szeretnél írni, nyomd meg a
-    ctrl+win+(num), billentyűket! Az eredeti állapotot ugyanezzel a
-    billentyűkombinációval tudod visszaállítani.
-</p>
-<h2 id="a-programról">A programról</h2>
-<p>A Segéd programot legjobb tudásom szerint készítettem, de
-    természetesen előfordulhatnak benne hibák, ezért csak saját
-    felelősségedre használd!</p>
-<p>A program nem tartalmaz rosszindulatú kódot, és nem telepít fel semmi
-    mást a számítógépedre.</p>
-<p>A program használata teljesen <strong>ingyenes</strong>, eredeti
-    formájában szabadon terjeszthető. Ha tetszik, ajánld ismerőseidnek!</p>
-<p>A program nyílt forráskódú, <em>saját használatra</em> tetszőlegesen
-    módosíthatod, de a módosított változatot nem terjesztheted. Kereskedelmi
-    célra nem használhatod.</p>
-<p>Ha hibát találsz benne, vagy javaslatod van, írj nekem a <a
-        href="mailto:szoftverfejleszto2016@gmail.com">szoftverfejleszto2016@gmail.com</a>
-    címre!</p>
-<a href="index.html">Vissza a kezdő oldalra</a>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tóth József</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <h1 id="segéd-1.0">Segéd 1.0</h1>
+    <h2 id="mire-való-a-program">Mire való a program?</h2>
+    <p>A program segítségével bármelyik Windows programban rövidítéseket
+        használhatsz, hogy kevesebbet kelljen gépelned. A rövidítéseket egy
+        szöveges fájlban (<em>sajat.txt</em>) adhatod meg.</p>
+    <p>Ezen kívül van még néhány funkció a munkád megkönnyítéséhez.</p>
+    <h2 id="telepítés">Telepítés</h2>
+    <p>A program magyar nyelvű Windows 10/11 operációs rendszeren
+        működik.</p>
+    <p>A program futtatásához sükség van az AutoHotkey programra, amelyet a
+        <a href="https://autohotkey.com/download/ahk-install.exe">https://autohotkey.com/download/ahk-install.exe</a>
+        címről tölthetsz le. A telepítésnél válaszd az <strong>ANSI 32-bites
+            kódolást</strong>!
+    </p>
+    <p>Ezután a Segéd program futtatásához egy tetszőleges mappába be kell
+        másolnod a fájlokat. A programot a <em>seged.ahk</em> fájllal indíthatod
+        el.</p>
+    <p>Indítás után megjelenik a program ikonja (Kék háttéren egy fehér S
+        betű) az értesítési területen, a képernyő jobb alsó sarkában. Ha a
+        Windows automatikusan elrejti az ikont, visszahúzhatod az egérrel az
+        értesítési területre.</p>
+    <p>A program <strong>menüjének</strong> megjelenítéséhez kattints a jobb
+        egérgombbal a program ikonjára, vagy nyomd meg a Win+Y billentyűket! A
+        menü eltüntetéséhez kattints a bal gombbal tetszőleges helyre, vagy
+        nyomd meg az Esc billentyűt! Duplán az ikonra kattintva a rövidítéseket
+        tartalmazó <em>sajat.txt</em> fájl jelenik meg.</p>
+    <p>Ha azt szeretnéd, hogy a program a Windows betöltésekor
+        <strong>automatikusan</strong> elinduljon, a menüben kapcsold be az
+        Automatikus indítás menüpontot.
+    </p>
+    <p>Ha áthelyezed a programot egy másik mappába, kapcsold ki, majd újra
+        be az Automatikus indítást (másképp nem fog működni)! Ha újabb
+        programváltozatot telepítesz, a régi változat menüjében kapcsold ki az
+        automatikus indítást, lépj ki a programból, majd indítsd el az új
+        változatot és kapcsold be ezen az Automatikus indítást!</p>
+    <h2 id="rövidítések-használata">Rövidítések használata</h2>
+    <p>Saját rövidítéseidet a <em>sajat.txt</em> fájlban tárolja a program.
+        Ezt megnyithatod a menü Rövidítések parancsával, duplán a program
+        ikonjára kattintva, a Ctrl+Win+szóköz billentyűkkel vagy közvetlenül a
+        fájlkezelőből is.</p>
+    <p>A sajat.txt fájlban a rövidítések ilyen formában vannak:<br />
+        ::pl::például</p>
+    <p>A bal oldali rész a rövidítés, a jobb oldali pedig a
+        behelyettesítendő szöveg. Ha bármilyen programban beírod a rövidítést és
+        utána tabulátort, akkor a rövidítés helyére a teljes szöveg kerül, és a
+        kurzor az utolsó szó végén fog állni. (A tabulátor nem íródik be.)</p>
+    <p>Soronként egy rövidítést adhatsz meg. Ha több soros szöveget
+        szeretnél rövidíteni, a sortörések helyett írd be az {Enter} szöveget.
+        Például:<br />
+        ::kji::Kis János{Enter}igazgató</p>
+    <p>Tetszőleges számú rövidítést megadhatsz. Célszerű ABC sorrendbe
+        rendezni őket, hogy áttekinthetőbb legyen a lista. Ha sok rövidítés van,
+        csoportokba is szervezheted őket, de ügyelj arra, hogy ugyanaz a
+        rövidítés ne forduljon elő kétszer. (Ilyenkor csak az első működik.)</p>
+    <p>A pontosvesszővel kezdődő sorok megjegyzések, a működést nem
+        befolyásolják.</p>
+    <p>A rövidítések megadása után el kell menteni a sajat.txt fájlt, majd
+        újra be kell tölteni a seged.ahk programot. (Válaszd a menüből az
+        Újratöltés parancsot!)</p>
+    <h2 id="program-mappájának-megnyitása">Program mappájának
+        megnyitása</h2>
+    <p>Ehhez válaszd a második menüpontot: Program mappája</p>
+    <h2 id="dokumentáció">Dokumentáció</h2>
+    <p>A <strong>Súgó</strong> parancs (Ctrl+Win+F1) egy rövid összefoglalót
+        jelenít meg a program használatáról egy szöveges fájlban. A
+        <strong>Leírás</strong> parancs (Ctrl+Win+F2) ezt a leírást jeleníti
+        meg. A könnyebb tájékozódás érdekében célszerű bekapcsolni a navigációban a
+        címsorok megjelenítését.
+    </p>
+    <p>A <strong>Névjegy</strong> a program névjegyét és a gép adatait
+        (gépnév, felhasználónév, Windows változat) jeleníti meg.</p>
+    <h2 id="felfüggesztés-újratöltés-kilépés">Felfüggesztés, újratöltés,
+        kilépés</h2>
+    <p>Bár a programot úgy terveztem, hogy ne ütközzön a Windows és más
+        programok billentyűkombinációival, előfordulhat, hogy ideiglenesen fel
+        szeretnéd <strong>függeszteni</strong> a működését. Ezt kétféleképpen
+        teheted meg:</p>
+    <ul>
+        <li>
+            <p>A jobb egérgombbal rákattintasz a program ikonjára és a
+                Felfüggeszt parancsot választod.</p>
+        </li>
+        <li>
+            <p>Megnyomod a Shift+Pause billentyűket.</p>
+        </li>
+    </ul>
+    <p>A program ikonja mindkét esetben egy zöld négyzetre változik, benne
+        egy fehér S betűvel, a menüben pedig pipa jelzi a felfüggesztést. A
+        visszakapcsolás ugyanúgy történik, mind a szüneteltetés: vagy újra a
+        Felfüggesztés parancsot választod a menüből, vagy megnyomod a
+        Shift+Pause billentyűt.</p>
+    <p>Ha megváltoztatod a rövidítéseket, <strong>töltsd be újra</strong> a
+        programot a menüből az Újratöltés paranccsal.</p>
+    <p>Ha <strong>ki szeretnél lépni</strong> a programból, akkor válaszd a
+        program menüjéből a Kilépés parancsot, vagy nyomd meg a Ctrl+Win+Q
+        billentyű­kombinációt. Ezután még meg is kell erősítened kilépési
+        szándékodat.</p>
+    <p>Remélem, hogy a kilépést ritkán fogod választani . A Windows
+        leállítása vagy kijelentkezés előtt sem szükséges kilépni a programból.
+        Futás közben kb. 2 MB memóriát foglal el.</p>
+    <h2 id="egyebek">Egyebek</h2>
+    <p>Alsó <strong>idézőjelet</strong> a ctrl+win+ö, felső
+        <strong>idézőjelet</strong> a ctrl+win+ü billentyűkkel írhatsz be.
+    </p>
+    <p>Ha a numerikus billentyűzeten a tizedesvessző helyett
+        <strong>tizedespontot</strong> szeretnél írni, nyomd meg a
+        ctrl+win+(num), billentyűket! Az eredeti állapotot ugyanezzel a
+        billentyűkombinációval tudod visszaállítani.
+    </p>
+    <h2 id="a-programról">A programról</h2>
+    <p>A Segéd programot legjobb tudásom szerint készítettem, de
+        természetesen előfordulhatnak benne hibák, ezért csak saját
+        felelősségedre használd!</p>
+    <p>A program nem tartalmaz rosszindulatú kódot, és nem telepít fel semmi
+        mást a számítógépedre.</p>
+    <p>A program használata teljesen <strong>ingyenes</strong>, eredeti
+        formájában szabadon terjeszthető. Ha tetszik, ajánld ismerőseidnek!</p>
+    <p>A program nyílt forráskódú, <em>saját használatra</em> tetszőlegesen
+        módosíthatod, de a módosított változatot nem terjesztheted. Kereskedelmi
+        célra nem használhatod.</p>
+    <p>Ha hibát találsz benne, vagy javaslatod van, írj nekem a <a
+            href="mailto:szoftverfejleszto2016@gmail.com">szoftverfejleszto2016@gmail.com</a>
+        címre!</p>
+    <a href="index.html">Vissza a kezdő oldalra</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
